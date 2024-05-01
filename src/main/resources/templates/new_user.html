@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Spring Boot App</title>
+	<!-- Link your CSS file -->
+	<link rel="stylesheet" type="text/css" href="css/Home.css">
+</head>
+<body>
+<header>
+	<h1>Welcome to Our Website</h1>
+	<!-- Add navigation links or logo here -->
+</header>
+
+<aside>
+	<!-- Sidebar content goes here -->
+	<h2>Sidebar</h2>
+	<ul>
+		<li><a href="#">Link 1</a></li>
+		<li><a href="#">Link 2</a></li>
+		<li><a href="#">Link 3</a></li>
+	</ul>
+</aside>
+
+<main>
+	<div class="contain">
+		<div class="text">
+			<h3><b>Application From</b></h3>
+			<br>
+			<from>
+				<div class="form">
+					<div class="input_field">
+						<label>Full name :-</label>
+						<input type="text"class="input"name="username" id="uname"placeholder="Enter your full name"required>
+					</div>
+					<br>
+					<div class="input_field">
+						<label>last name :-</label>
+						<input type="text"class="input"name="username" id="uname"placeholder="Enter your last name"required>
+					</div>
+					<br>
+					<div class="input_field">
+						<label>Password:-</label>
+						<input type="password"class="input"name="username" id="uname"placeholder="Enter your password"minlength="8" required>
+					</div>
+					<br>
+					<div class="input_field">
+						<label>E-Mail:-</label>
+						<input type="text"class="input"name="username" id="uname"placeholder="Enter your e-mail"required>
+					</div>
+					<br>
+					<div class="input_field">
+						<label>Gender:-</label>
+						<input type="radio"name="m" id="radio">male
+						<input type="radio"name="f"id="radio">female
+					</div>
+					<br>
+					<div class="input_field">
+						<label>Nationality:-</label>
+						<select name=nationality>
+							<option value="india">india
+							<option value="pakistan">pakistan
+							<option value="nepal">nepal
+						</select>
+					</div>
+					<br>
+					<div class="input_field">
+						<label>upload resume:-</label>
+						<input type="checkbox"selctname="choose file">choose file
+					</div>
+					<br>
+					<div class="input_field">
+						<label>Address:-</label>
+						<textarea rows="2"cols="30"name="discript"/ required>
+						</textarea>
+					</div>
+					<br>
+					<input type="checkbox"name="1"><span>notify me the status via e-mail.</span>
+					<br>
+					<input type="radio"name="1"><span>I agree to term & condition.</span>
+					<br>
+					<div class="submit">
+						<br><input type="submit" id="submit" value="submit"required>
+					</div>
+					</form>
+</main>
+
+<footer>
+	<!-- Footer content goes here -->
+	<p>&copy; 2024 Your Website Name. All Login Form.</p>
+</footer>
+<script>
+	function validateForm() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Regex patterns for validation
+      var usernamePattern = /^[a-zA-Z0-9_]+$/; // Alphanumeric and underscore only
+      var passwordPattern = /^[a-zA-Z0-9!@#$%^&*]{6,}$/; // At least 6 characters long, can include special characters
+
+      // Validate username
+      if (!usernamePattern.test(username)) {
+        alert("Username can only contain letters, numbers, and underscores.");
+        return false;
+      }
+
+      // Validate password
+      if (!passwordPattern.test(password)) {
+        alert("Password must be at least 6 characters long and can contain letters, numbers, and special characters (!@#$%^&*).");
+        return false;
+      }
+
+      return true;
+    }
+</script>
+</body>
+</html>
